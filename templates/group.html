@@ -26,11 +26,16 @@
         </style>
     </head>
     <body>
+        
         <h2>Welcome to the Chat!</h2>
         <p>This online chat supports mutiple users and depends on local storage</p>
         <p>It's an online community for coder types that supports different groupings and subgroupings similar to
            the popular app, Slack.</p>
-        <p>Let's set up a sample user: {{user_1}} </p>
+        {% if user_1 %}
+            <p>Our sample user is: {{user_1}} </p>
+        {% else %}
+            <p>We don't have a user yet.</p>
+        {% endif %}
         <div id="container">
             <div id="text_1">Chat text1
             </div>
