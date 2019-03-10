@@ -7,7 +7,8 @@
             #outer {
                 border: 10px solid black;
                 width: 30%;
-                background-color: #7C0832;     
+                background-color: #7C0832; 
+                    
             }
             h2 {      
                 color: white;
@@ -22,11 +23,10 @@
                 width: 100%;
             }
             #text_1, #text_2, #text_3 {
-                width: 100%;
+                width: 98.5%;
                 height: 50px;
                 background-color: white;
-                color: #7C0832;
-              
+                color: #7C0832;       
                 padding-left: 5px;
                 border-bottom: 1px dotted silver;
             }
@@ -35,6 +35,7 @@
     <body>
        <div id="outer"> 
         <h2>Welcome to the Chat!</h2>
+       
         <p>This online chat supports mutiple users and depends on local storage</p>
         <p>It's an online community for coder types that supports different groupings and subgroupings similar to
            the popular app, Slack.</p>
@@ -44,18 +45,10 @@
             <p>We don't have a user yet.</p>
         {% endif %}
         <div id="container">
-            <div id="text_1">Chat text1   ||   Many words many words many words
+            {% for chat in chats%}
+            <div id="text_1">{{chat}}
             </div>
-            <div id="text_2">Chat text2   ||   Many words many words many words
-            </div>
-            <div id="text_3">Chat text3   ||   Many words many words many words
-            </div>
-             <div id="text_1">Chat text1   ||   Many words many words many words
-            </div>
-            <div id="text_2">Chat text2   ||   Many words many words many words
-            </div>
-            <div id="text_3">Chat text3   ||   Many words many words many words
-            </div>
+            {% endfor %}
         </div> 
         </div>  
     </body>
