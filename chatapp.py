@@ -9,7 +9,8 @@ def index():
 
 @app.route('/home', methods=['GET','POST'])
 def home():
-    return render_template('group.html')
+    return render_template('group.html',user_1="*Johnny the Coder Guy*")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

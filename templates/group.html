@@ -1,11 +1,43 @@
 <html>
     <head>
         <title>Group Chat</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <style>
+            * {
+                margin-left: 30px;
+            }
+            h2 {
+                margin-top: 50px;
+            }
+            p {
+                width: 50%;
+            }
+            #container {
+                border: 1px gray solid;
+                width: 50%;
+                height: 300px;
+            }
+            #text_1, #text_2, #text_3 {
+                width: 90%;
+                height: 50px;
+                background-color:  lightsalmon;
+                margin: 15px;
+            }
+        </style>
     </head>
     <body>
         <h2>Welcome to the Chat!</h2>
         <p>This online chat supports mutiple users and depends on local storage</p>
         <p>It's an online community for coder types that supports different groupings and subgroupings similar to
-           the popular app, Slack</p>
+           the popular app, Slack.</p>
+        <p>Let's set up a sample user: {{user_1}} </p>
+        <div id="container">
+            <div id="text_1">Chat text1
+            </div>
+            <div id="text_2">Chat text2
+            </div>
+            <div id="text_3">Chat text3
+            </div>
+        </div>   
     </body>
 </html>
