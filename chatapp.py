@@ -1,12 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
+
+
 
 app = Flask(__name__)
 @app.route('/')
 def index():
     return '<h1>Hello World</h1>'
 
-@app.route('/homt')
+@app.route('/home', methods=['GET','POST'])
 def home():
-    return '<h3>Welcome to the ChatApp Home Page</h3>'
+    return render_template('group.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
